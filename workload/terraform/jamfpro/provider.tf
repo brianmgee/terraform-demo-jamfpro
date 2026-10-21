@@ -2,7 +2,7 @@ terraform {
   required_providers {
     jamfpro = {
       source  = "deploymenttheory/jamfpro"
-      version = "0.27.0" // "~> 0.6.1"
+      version = "0.42.0"
 
     }
   }
@@ -32,7 +32,7 @@ variable "jamfpro_instance_fqdn" {
 variable "jamfpro_auth_method" {
   description = "Auth method chosen for Jamf. Options are 'basic' or 'oauth2'."
   sensitive   = true
-  default     = ""
+  default     = "oauth2"
 }
 
 variable "jamfpro_client_id" {
@@ -89,7 +89,7 @@ variable "jamfpro_jamf_load_balancer_lock" {
 
 variable "jamfpro_token_refresh_buffer_period_seconds" {
   description = "The buffer period in seconds for token refresh."
-  default     = 300
+  default     = 30
 }
 
 variable "jamfpro_mandatory_request_delay_milliseconds" {

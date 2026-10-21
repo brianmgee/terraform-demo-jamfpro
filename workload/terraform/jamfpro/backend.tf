@@ -1,9 +1,9 @@
-// set terraform cloud organization and workspaceterraform {
+// Configure HCP Terraform organization and workspace
 terraform {
   cloud {
-    organization = "deploymenttheory"
+    organization = "BrianMGee"
     workspaces {
-      tags = ["jamf_pro"]
+      name = "jamf-dummy-lab"
     }
   }
 }
