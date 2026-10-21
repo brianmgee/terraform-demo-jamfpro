@@ -25,6 +25,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 *.lock.hcl
+!workload/terraform/jamfpro/.terraform.lock.hcl
 
 # Exclude all .tfplan files
 *.tfplan
